@@ -28,7 +28,7 @@ public class LoadBalanceApplication {
 
 	@GetMapping("/hi")
 	public String hi() {
-		return this.restTemplate.getForObject("http://book-service/books/local-service-instance", String.class);
+		return this.restTemplate.getForObject("http://BOOK-SERVICE/books/local-service-instance", String.class);
 	}
 
 	public static void main(String[] args) {
