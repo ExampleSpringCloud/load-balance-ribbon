@@ -17,8 +17,8 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class LoadBalanceApplication {
 
-	@LoadBalanced
 	@Bean
+	@LoadBalanced
 	RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
@@ -26,7 +26,7 @@ public class LoadBalanceApplication {
 	@Autowired
 	RestTemplate restTemplate;
 
-	@GetMapping("/hi")
+	@GetMapping("/")
 	public String hi() {
 		return this.restTemplate.getForObject("http://BOOK-SERVICE/books/local-service-instance", String.class);
 	}
