@@ -4,5 +4,5 @@
 
 ### Test Application
 - run multiple instances of <code>book-service</code> application
-- go to <code>http://localhost:8086/</code>
+- go to http://localhost:8086/
 - refresh again and again and notice the difference in application id
